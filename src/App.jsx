@@ -1,4 +1,7 @@
+import { useState } from "react";
 import Header from "./components/Header";
+import Player from "./components/Player";
+import GameBoard from "./components/GameBoard";
 
 function App() {
   return (
@@ -6,15 +9,10 @@ function App() {
       <Header></Header>
       <div id="game-container">
         <ol id="players">
-          <li>
-            <span className="player-name">Player 1</span>
-            <span className="player-symbol">X</span>
-          </li>
-          <li>
-            <span className="player-name">Player 2</span>
-            <span className="player-symbol">O</span>
-          </li>
+          <Player name="player 1" symbol="X"></Player>
+          <Player name="player 2" symbol="O"></Player>
         </ol>
+        <GameBoard></GameBoard>
       </div>
     </div>
   );
